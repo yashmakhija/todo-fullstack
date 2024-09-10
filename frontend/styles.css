@@ -1,0 +1,264 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(4, 11, 18);
+  color: white;
+  font-family: "Inter", sans-serif;
+  background-image: url("bgimg.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+/* Top Bar Styling */
+.top-bar {
+  padding: 1rem 2rem;
+  background-color: rgba(4, 11, 18, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.logo a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Default color for "ToDo" */
+}
+
+.logo a span {
+  color: #0081ff; /* Color for "App" */
+}
+
+.logo span {
+  color: #0081ff;
+}
+
+.top-bar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.top-bar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.top-bar-links a:hover {
+  color: #0081ff;
+}
+
+/* Hero Section with Animation */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+.gradient-txt {
+  background: linear-gradient(to right, #fff, #0081ff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.sub-txt {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons with Animation */
+.auth-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-animate {
+  padding: 0.75rem 1.5rem;
+  background-color: #0081ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-animate:hover {
+  transform: scale(1.1);
+  background-color: #005cbf;
+}
+
+/* Info Section */
+.info-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: rgba(4, 11, 18, 0.9);
+  color: white;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 5rem;
+  padding: 1rem 0;
+  background-color: rgba(4, 11, 18, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* General Styles for Auth Pages */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  padding: 2rem;
+  background-color: rgb(4, 11, 18); /* Light background for contrast */
+}
+
+.auth-card {
+  background: rgba(4, 11, 18, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.auth-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0081ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 1rem;
+}
+
+.auth-form button:hover {
+  background-color: #005cbf;
+  transform: scale(1.05);
+}
+
+.auth-form p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-form p a {
+  color: #0081ff;
+  text-decoration: none;
+}
+
+.auth-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Update Navbar for Auth Pages */
+.navbar-container {
+  padding: 1rem 2rem;
+  background-color: rgba(4, 11, 18, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.nav-links a:hover {
+  color: #0081ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <title>Sign Up</title>
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+  <script>
+    async function signUp() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      await axios.post("http://localhost:3000/signup", {
+        name: name,
+        email: email,
+        password: password,
+      });
+      alert("You are signed in");
+    }
+  </script>
+  <body>
+    <header class="navbar-container">
+      <div class="logo">
+        <a href="index.html">ToDo<span>App</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="signin.html">Sign In</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="auth-page">
+      <div class="auth-card animate__animated animate__fadeInUp">
+        <h1 class="animate__animated animate__fadeIn">Sign Up</h1>
+        <form class="auth-form">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </form>
+        <button onclick="signUp()" type="submit" class="btn-animate">
+          Sign Up
+        </button>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+      </div>
+    </main>
+  </body>
+</html>

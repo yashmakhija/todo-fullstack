@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ToDo App</title>
+
+    <!-- Animation libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;800&family=Inter:wght@100;900&display=swap");
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+    </style>
+  </head>
+  <body>
+    <!-- Top Bar with Animations -->
+    <header class="top-bar animate__animated animate__fadeInDown">
+      <div class="logo"><a href="index.html">ToDo<span>App</span></a></div>
+      <div class="top-bar-links">
+        <a href="#">Home</a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="signin.html" id="signup">Sign Up</a>
+        <a href="signin.html" id="signin">Sign In</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-section animate__animated animate__fadeInUp">
+      <div class="hero-image">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player
+          src="https://lottie.host/576d3fe0-04c9-42bc-baa2-451b9bec335a/YaYGLqDZBw.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <h1>Manage Your <span class="gradient-txt">Tasks</span></h1>
+      <p class="sub-txt">Organize your tasks with ease and stay productive.</p>
+      <div class="auth-container">
+        <a href="signup.html"><button id="signupBtn" class="btn-animate">Sign Up</button></a>
+         <a href="signin.html"><button id="signinBtn" class="btn-animate">Sign In</button></a>
+      </div>
+    </main>
+
+    <!-- Info Section -->
+    <section class="info-section">
+      <div class="info-block">
+        <h2 class="animate__animated animate__fadeInLeft">What is a To-Do List?</h2>
+        <p class="animate__animated animate__fadeInRight">A tool to help you manage tasks and stay on top of priorities.</p>
+      </div>
+      <div class="info-block">
+        <h2 class="animate__animated animate__fadeInLeft">Why Choose Us?</h2>
+        <p class="animate__animated animate__fadeInRight">
+          We provide a modern, intuitive platform focused on helping you stay productive.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-txt">Made with ❤️ by Yash Makhija</div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

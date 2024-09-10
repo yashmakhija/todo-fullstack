@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign In</title>
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+  <script>
+    async function signin() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const response = await axios.post("http://localhost:3000/signin", {
+        email: email,
+        password: password,
+      });
+      localStorage.setItem("token", response.data.token);
+      alert("You are signed in");
+    }
+  </script>
+  <body>
+    <header class="navbar-container">
+      <div class="logo">
+        <a href="index.html">ToDo<span>App</span></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="signin.html">Sign In</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="auth-page">
+      <div class="auth-card animate__animated animate__fadeInUp">
+        <h1 class="animate__animated animate__fadeIn">Sign In</h1>
+        <form class="auth-form">
+          <input id="email" type="email" placeholder="Email" required />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+        </form>
+        <button onclick="signin()" type="submit" class="btn-animate">
+          Sign In
+        </button>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </main>
+  </body>
+</html>
